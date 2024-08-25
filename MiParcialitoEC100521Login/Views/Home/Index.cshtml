@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open English Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            background-image: url('https://student.openenglish.com/images/new-login/login-12.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /* Ensures the image covers the entire background */
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .logo img {
+                width: 150px;
+            }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9966;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .password-reset {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="https://student.openenglish.com/images/logo_black_lg.png" alt="Open English Logo">
+        </div>
+
+        <h1>Welcome Student</h1>
+
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-button">Log In</button>
+
+            <div class="form-footer">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember"> Remember Me
+                </label>
+                <a href="#" class="password-reset">Password Reset</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
